@@ -1,12 +1,10 @@
+// Importação de estilos
 import "./App.css";
-import Navbar from "./components/Navbar";
+// Importação de rotas
+import Router from "./routes";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <Router />;
 }
 
 export default App;

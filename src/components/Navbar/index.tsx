@@ -1,10 +1,10 @@
 // Imports de bibliotecas externas
 import classNames from "classnames";
 import { RiShoppingCart2Line, RiShoppingCartFill } from "react-icons/ri";
-
 // Imports de arquivos locais
 import logo from "@assets/logo.svg";
 import styles from "./Navbar.module.scss";
+import Busca from "../Busca";
 
 const iconeProps = {
   color: "white",
@@ -27,7 +27,9 @@ export default function Navbar() {
           </a>
         </div>
       </div>
-      <div className={styles.busca}></div>
+      <div className={styles.busca}>
+        <Busca />{" "}
+      </div>
       <div className={styles.icones}>
         <a href="/carrinho">
           {window.location.pathname === "/carrinho" ? (
