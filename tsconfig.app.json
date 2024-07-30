@@ -25,9 +25,10 @@
   },
 
   /* Aliases */
-  "baseUrl": ".",
+  "baseUrl": "src",
   "paths": {
-    "@components/*": ["src/components/*"],
+    "@/*": ["*"],
+    "@assets/*": ["assets/*"],
     "@styles/*": ["src/styles/*"]
   },
 
