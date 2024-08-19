@@ -27,4 +27,5 @@ export interface RootState {
   categorias: CategoriaProps[];
   itens: ItemProps[];
   carrinho: CarrinhoProps[];
+  busca: string
 }

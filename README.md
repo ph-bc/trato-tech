@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Trato Tech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Trato Tech** é um projeto desenvolvido com React e TypeScript durante o curso "React: Gerenciamento de Estados Globais com Redux" da Alura. O objetivo deste projeto é demonstrar o uso de gerenciamento de estados globais utilizando Redux em uma aplicação React.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- <a href="https://reactjs.org/">React</a> - Biblioteca para construção de interfaces de usuário.
+- <a href="https://www.typescriptlang.org/">TypeScript</a> - Linguagem de programação que adiciona tipagem estática ao JavaScript.
+- <a href="https://redux.js.org/">Redux</a> - Biblioteca para gerenciamento de estado global.
+- <a href="https://react-redux.js.org/">React-Redux</a> - Biblioteca para integrar Redux com React.
+- <a href="https://reactrouter.com/">React Router DOM</a> - Biblioteca para roteamento em aplicações React.
+- <a href="https://vitejs.dev/">Vite</a> - Ferramenta de construção rápida para projetos front-end.
+- <a href="https://sass-lang.com/">SCSS</a> - Pré-processador CSS para escrita de estilos mais eficientes e organizados.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Gerenciamento global de estado**: Utiliza Redux para gerenciar o estado da aplicação de forma centralizada.
+- **Integração de estado com componentes**: Usa React-Redux para conectar os componentes React ao estado global.
+- **Roteamento de páginas**: Implementado com React Router DOM para gerenciar navegação entre diferentes páginas da aplicação.
+- **Tipagem estática**: Adicionada com TypeScript para garantir maior segurança e previsibilidade do código.
+- **Estilização avançada**: Utiliza SCSS para criar estilos mais organizados e eficientes.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Para iniciar o projeto, siga os seguintes passos:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone o repositório:
+   <pre><code>git clone https://github.com/seu-usuario/trato-tech.git</code></pre>
+2. Navegue até o diretório do projeto:
+   <pre><code>cd trato-tech</code></pre>
+3. Instale as dependências:
+   <pre><code>npm install</code></pre>
+4. Inicie o servidor de desenvolvimento:
+   <pre><code>npm run dev</code></pre>
+5. Acesse a aplicação em <a href="http://localhost:5173">http://localhost:5173</a>.

@@ -7,12 +7,17 @@ import { RootState } from "../../store/types";
 
 export default function Categoria() {
   const { nomeCategoria } = useParams<{ nomeCategoria: string }>();
-  const { categoria, itens } = useSelector((state: RootState) => ({
-    categoria: state.categorias.find(
-      (categoria) => categoria.id === nomeCategoria
-    ),
-    itens: state.itens.filter((item) => item.categoria === nomeCategoria),
-  }));
+  const { categoria, itens } = useSelector((state: RootState) => {
+    const regexp = new RegExp(state.busca, "i");
+    return {
+      categoria: state.categorias.find(
+        (categoria) => categoria.id === nomeCategoria
+      ),
+      itens: state.itens.filter(
+        (item) => item.categoria === nomeCategoria && item.titulo.match(regexp)
+      ),
+    };
+  });
 
   if (!categoria) {
     return <div>Categoria não encontrada</div>; // Mensagem de erro ou página de erro
@@ -26,7 +31,7 @@ export default function Categoria() {
         imagem={categoria.header}
       />
       <div className={styles.itens}>
-        {itens?.map(item => (
+        {itens?.map((item) => (
           <Item key={item.id} {...item} />
         ))}
       </div>
